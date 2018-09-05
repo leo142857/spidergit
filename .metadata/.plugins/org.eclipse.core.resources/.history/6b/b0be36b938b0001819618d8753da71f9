@@ -1,0 +1,34 @@
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class Test {
+    public static void main(String[] args){
+//    	System.out.println(Math.hypot(4,5));
+//    	System.out.format("%.5f",Math.hypot(3,4));
+//    	Arrays.stream(new int[1]).min().getAsInt();
+        Scanner sc = new Scanner(System.in);
+        long num = sc.nextLong();
+        int count = 0;
+        if(num<0){
+            count++;
+        }
+        num = Math.abs(num);
+        while(num>=1){
+            if(num%2==1){
+                count++;
+            }
+            num = num/2;
+        }
+        System.out.println(count);
+    
+    }
+    
+
+}

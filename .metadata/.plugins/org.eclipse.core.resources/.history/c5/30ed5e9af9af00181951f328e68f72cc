@@ -1,0 +1,22 @@
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.Scanner;
+
+public class Test {
+	public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        int count = 0;
+        while(num>2){
+            count+= num/3;
+            num = num/3+num%3;
+            if(num==2){
+                count++;
+            }
+        } 
+        System.out.println(count);
+    }
+
+}

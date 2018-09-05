@@ -1,0 +1,59 @@
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class Test {
+    public static void main(String[] args){
+    	System.out.println(Math.hypot(4,5));
+    	System.out.format("%.5f",Math.hypot(4,5));
+//        Set<Integer> set = new TreeSet(new Comparator() {
+//
+//			@Override
+//			public int compare(Object a, Object b) {
+//				// TODO Auto-generated method stub
+//				if((Integer)a>(Integer)b) {
+//					return 1;
+//				}
+//				return -1;
+//			}
+//        	
+//        });
+//    	StringBuffer sb = new StringBuffer("abc");
+//    	int[] i = {1,4,2,6,5};
+//    	int[] a = new int[5];
+//    	Arrays.sort(i);
+//    	for (int j : i) {
+//    		System.out.print(j);
+//			
+//		}
+//    	Set<Integer> set = new HashSet();
+//    	Scanner sc = new Scanner(System.in);
+//    	int num = sc.nextInt();
+//    	for(int i = 0;i<num;i++) {
+//    		set.add(sc.nextInt());
+//    	}
+//    	num = sc.nextInt();
+//    	for(int i = 0;i<num;i++) {
+//    		set.add(sc.nextInt());
+//    	}
+//    	Object[] i = set.toArray();
+//    	Arrays.sort(i);
+//    	for (Object o : i) {
+//			System.out.println(o);
+//		}
+//    	Set<Integer> set = new TreeSet();
+//        Scanner sc = new Scannerb(System.in);
+//        for(int i = 0;i<3;i++) {
+//        	set.add(sc.nextInt());
+//        }
+//        for(Object i:set){
+//            System.out.println(i);
+//        }
+    }
+}

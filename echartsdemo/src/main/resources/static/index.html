@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello WebSocket</title>
+    <script src="https://cdn.bootcss.com/stomp.js/2.3.3/stomp.min.js"></script>
+    <script src="https://cdn.bootcss.com/sockjs-client/1.1.1/sockjs.min.js"></script>
+     <script src="http://echarts.baidu.com/dist/echarts.js"></script>
+    <script type="text/javascript">
+
+		document.addEventListener('DOMContentLoaded', function() {// request permission on page load
+			if (Notification.permission !== "granted")
+				Notification.requestPermission();
+		});
+
+		/**
+			The public notify function
+		 */
+		function notifyBox(title, icon, body, url) {
+			if (!Notification) {
+				alert('Desktop notifications not available in your browser. Try Chromium.');
+				return;
+			}
+			if (Notification.permission !== "granted")
+				Notification.requestPermission();
+			else {
+				var notification = new Notification(title, {
+					icon : icon,
+					body : body,
+				});
+
+				notification.onclick = function() {
+					window.open(url);
+				};
+			}
+		}
+
+		var stompClient = null;
+
+		var userId = 'abc';
+
+		function setConnected(connected) {
+			document.getElementById('connect').disabled = connected;
+			document.getElementById('disconnect').disabled = !connected;
+			document.getElementById('response').innerHTML = '';
+		}
+
+        // document.getElementById('conversationDiv').style.visibility = 'visible';
+
+		function connect() {
+			var socket = new SockJS('http://localhost:8080/car');
+			stompClient = Stomp.over(socket);
+            stompClient.heartbeat.outgoing = 20000;  // client will send heartbeats every 20000ms
+            stompClient.heartbeat.incoming = 0;      // client does not want to receive heartbeats from the server
+            var connect_callback = function(frame) {
+                // called back after the client is connected and authenticated to the STOMP server
+                setConnected(true);
+                console.log('Connected: ' + frame);
+                stompClient.subscribe('/topic/client', function(
+                    msg) {
+                    var back = JSON.parse(JSON.parse(msg.body).message);
+        			var myChart = echarts.init(document.getElementById('main'));
+        			myChart.setOption({
+        				 title: {
+        		                text: back.name
+        		            },
+        		            tooltip: {},
+        		            legend: {
+        		                data:['销量']
+        		            },
+        		            xAxis: {
+        		                data: [back.datekey0,back.datekey1,back.datekey2,back.datekey3,back.datekey4
+        		                	,back.datekey5,back.datekey6,back.datekey7,back.datekey8]
+        		            },
+        		            yAxis: {},
+        		            series: [{
+        		                name: '销量',
+        		                type: 'bar',
+        		                data: [back.valuekey0,back.valuekey1,back.valuekey2,back.valuekey3,back.valuekey4,back.valuekey5,
+        		                	back.valuekey6,back.valuekey7,back.valuekey8]
+        		            }]
+        			});
+                });
+            };
+            var error_callback = function(error) {
+                // display the error's message header:
+                sleep(5000); //瑜版挸澧犻弬瑙勭《閺嗗倸浠�5缁夛拷
+                connect();//闁插秵鏌婃潻鐐村复
+            };
+			stompClient.connect({},connect_callback,error_callback);
+		}
+
+		function disconnect() {
+			if (stompClient != null) {
+				stompClient.disconnect();
+			}
+			setConnected(false);
+			console.log("Disconnected");
+		}
+
+		function sendName() {
+			var name = document.getElementById('name').value;
+			stompClient.send("/app/server", {}, JSON.stringify({
+				'message' : name
+			}));
+		}
+
+		function showGreeting(message) {
+			var response = document.getElementById('response');
+			var p = document.createElement('p');
+			p.style.wordWrap = 'break-word';
+			p.appendChild(document.createTextNode(message));
+			response.appendChild(p);
+		}
+
+        function sleep(d){
+            for(var t = Date.now();Date.now() - t <= d;);
+        }
+
+	</script>
+</head>
+<body onload="disconnect()">
+<noscript><h2 style="color: #ff0000">Seems your browser doesn't support Javascript! Websocket relies on Javascript being enabled. Please enable
+    Javascript and reload this page!</h2></noscript>
+<div>
+    <div>
+        <button id="connect" onclick="connect();">Connect</button>
+        <button id="disconnect" disabled="disabled" onclick="disconnect();">Disconnect</button>
+    </div>
+    <div id="conversationDiv">
+        <label>input</label><input type="text" id="name" />
+        <button id="sendName" onclick="sendName();">Send</button>
+        <p id="response"></p>
+    </div>
+    <div id="main" style="width: 100%;height:800px;"></div>
+</div>
+</body>
+</html>

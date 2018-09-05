@@ -1,0 +1,33 @@
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class Test {
+    public static void main(String[] args){
+//        Set<Integer> set = new TreeSet(new Comparator() {
+//
+//			@Override
+//			public int compare(Object a, Object b) {
+//				// TODO Auto-generated method stub
+//				if((Integer)a>(Integer)b) {
+//					return 1;
+//				}
+//				return -1;
+//			}
+//        	
+//        });
+    	Set<Integer> set = new TreeSet();
+        Scanner sc = new Scanner(System.in);
+        for(int i = 0;i<3;i++) {
+        	set.add(sc.nextInt());
+        }
+        for(Object i:set){
+            System.out.println(i);
+        }
+    }
+}

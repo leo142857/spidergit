@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+                    "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="Mapper">
+
+    
+    <insert id="replaceAll" parameterType="com.redis_echarts.app.domain.CarSales" >
+        REPLACE INTO ncarsales
+		VALUES (#{id},#{carType},#{dateType},#{date},#{sales})
+    </insert>
+    <select id="selectSales" resultType = "com.redis_echarts.app.domain.CarSales">
+    	SELECT * from ncarsales where carType = #{carType} and dateType = #{dateType} and date = #{date}
+    </select>
+</mapper>

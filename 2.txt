@@ -1,0 +1,13 @@
+create table carnum(
+		Id int primary key,
+    CarType varchar(255),
+		2018-6 int,
+		2018-5 int,
+		2018-4 int,
+		2018-3 int,
+		2018-2 int,
+		2018-1 int,
+		2018 int,
+		2017 int,
+		2016 int
+ );

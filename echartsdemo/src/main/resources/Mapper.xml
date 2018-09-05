@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+                    "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="Mapper">
+
+    
+    <insert id="replaceAll" parameterType="com.example.demo.domain.CarSales" >
+        REPLACE INTO ncarsales
+		VALUES (#{id},#{carType},#{dateType},#{date},#{sales})
+    </insert>
+    <select id="selectSales" resultType = "com.example.demo.domain.CarSales" parameterType="String">
+    	SELECT * from ncarsales where carType like CONCAT('%',#{carType},'%') order by id
+    </select>
+</mapper>

@@ -1,0 +1,493 @@
+抓取的内容：  
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+
+
+	<title>【搜狐汽车产销库_汽车产销数据】_搜狐汽车网</title>
+	<meta name="keywords"  content="汽车销量排行,汽车销量排行榜,中国汽车产销数据,国外汽车产销数据,乘用车产销数据,汽车销量排名,汽车产销趋势,汽车销量趋势,汽车销量数据,汽车产销数据平台,汽车产销库,汽车产销数据,搜狐汽车网"  />
+	<meta name="description" content="搜狐汽车产销库为您提供最新的国内国外汽车产销数据,搜狐汽车产销数据平台以表格、趋势图、车型销量对比查询以及汽车品牌车型产销数据对比等多种方式为您呈现最新汽车产销数据。"  />
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="renderer" content="webkit" />
+<meta name="robots" content="all" />
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+<meta http-equiv="Cache-Control" content="no-transform"/>
+
+
+
+
+ 
+<script type="text/javascript" src="//m2.auto.itc.cn/car/theme/dbcatalog/js/sogouTongji_c62b167.js" charset="UTF-8"></script>
+<script>
+   var pwindow = window.parent;
+   var url = pwindow.location.href;
+   var iframeReg = /\/iframe\.html/;
+   var photoReg = /com\/photo\/iframe\.html$/;
+   var cxdataReg = /com\/cxdata\/iframe\.html$/;
+   var videoReg = /com\/video\/iframe\.html$/;
+   if(iframeReg.test(url)) {
+	 if(photoReg.test(url)) {
+		 pwindow.location.href = url.replace(photoReg,'com/photo/');
+	 } else if(cxdataReg.test(url)) {
+		 pwindow.location.href = url.replace(cxdataReg,'com/cxdata/');
+	 } else if(videoReg.test(url)) {
+		 pwindow.location.href = url.replace(videoReg,'com/video/');
+	 } else {
+		pwindow.location.href = url.replace(iframeReg,'.shtml');
+	 }
+   }
+
+   function imgerror(dom,url) {
+   	   if(dom.src == url) {
+   		  dom.src = "//db.auto.sohu.com/images/no_car_img.jpg";
+   		  return;
+   	   }
+   	   dom.src = url;
+   	}
+
+   	function modelImgError(dom, url) {
+   	    if(url == '') {
+   	        dom.src = "/statics/images/defaultFocus.jpg";
+   	        return;
+   	    }
+   	    dom.src = url;
+   	}
+
+</script>
+
+    
+<script type="text/javascript" language="javascript" src="//js.sohu.com/pv.js?ifr"></script>
+
+</script>
+
+
+
+<link href="//m2.auto.itc.cn/car/theme/dbcatalog/css/base_frame_f4aaf0a.css" type="text/css" rel="stylesheet" />
+<link href="//m2.auto.itc.cn/car/theme/dbcatalog/css/sales_home_5a776dc.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<div class="main" id="content">
+
+
+
+<script type="text/javascript">  
+	//产品库报价页面:0,行情页面:3
+	var catalog_page_type = '4';
+	var baseDomainForJs = "//db.auto.sohu.com";
+
+    var catalog_home_href = '//db.auto.sohu.com/home/';
+    var catalog_home_rootbrand_href_format = '//db.auto.sohu.com/brand_[rootBrandId]/home.shtml';
+    var catalog_home_subbrand_href_format = '//db.auto.sohu.com/subBrand_[subBrandId]/home.shtml';
+    var catalog_home_model_href_format = baseDomainForJs;
+
+	var catalog_price_href = '//db.auto.sohu.com/price/';
+	var catalog_price_rootbrand_href_format = '//db.auto.sohu.com/brand_[rootBrandId]/price.shtml';
+	var catalog_price_subbrand_href_format = '//db.auto.sohu.com/subbrand_[subBrandId]/price.shtml';
+	var catalog_price_model_href_format = '//db.auto.sohu.com/model_[modelId]/price.shtml';
+	
+	var catalog_picture_href = '//db.auto.sohu.com/photo/';
+	var catalog_picture_rootbrand_href_format = '//db.auto.sohu.com/brand_[rootBrandId]/photo.shtml';
+	var catalog_picture_model_href_format = '//db.auto.sohu.com/model_[modelId]/photo.shtml';	
+
+	var catalog_video_href = '//db.auto.sohu.com/video/';
+	var catalog_video_rootbrand_href_format = '//db.auto.sohu.com/video/brand_[rootBrandId].shtml';
+	var catalog_video_model_href_format = '//db.auto.sohu.com/video/model_[modelId].shtml';
+	
+	var catalog_hangqing_href = '//db.auto.sohu.com/priceInfo/';
+	var catalog_hangqing_rootbrand_href_format = '//db.auto.sohu.com/brand_[rootBrandId]/priceInfo.shtml';
+	var catalog_hangqing_model_defaultcity_href_format = '//db.auto.sohu.com/model_[modelId]/priceInfo.shtml';
+	
+	var catalog_sales_href = '//db.auto.sohu.com/cxdata/';
+	var catalog_sales_rootbrand_href_format = '//db.auto.sohu.com/brand_[rootBrandId]/salesbrand.shtml';
+	var catalog_sales_model_href_format = '//db.auto.sohu.com/model_[modelId]/salescar.shtml';	
+	var catalog_sales_subbrand_href_format = '//db.auto.sohu.com/brand_[rootBrandId]/salesbrandpage_[subBrandId].shtml';	
+</script>
+
+
+
+
+<div class="location">
+	
+
+	<a href="//db.auto.sohu.com/cxdata/" class="home" target="_parent">返回销量首页</a>
+
+	<a target="_blank" href="http://auto.sohu.com">汽车频道</a>&nbsp;&gt;&nbsp;
+	<a target="_blank" href="//db.auto.sohu.com">车型大全</a>&nbsp;&gt;&nbsp;
+	<a target="_parent" href="//db.auto.sohu.com/cxdata/">汽车销量</a>
+	
+					
+		&nbsp;&gt;&nbsp;<a target="_parent" href="//db.auto.sohu.com/brand_197/salesbrand.shtml">大众销量</a>
+	
+				&nbsp;&gt;&nbsp;<a target="_parent" href="//db.auto.sohu.com/brand_197/salesbrandpage_180.shtml">上汽大众销量</a>
+							
+		&nbsp;&gt;&nbsp;<a target="_parent" href="//db.auto.sohu.com/model_2251/salescar.shtml">朗逸销量</a>
+		
+</div>
+<!--s= 销量查询-->
+<div class="area_box">
+  <div class="tit">
+    <h2>朗逸销量数据</h2>
+  </div>
+      
+<div class="xlseach">
+	<div class="l">
+    	<div class="seachcar" >
+     		<span class="label">按品牌</span>
+     		<div class="selbox" style="z-index:1000;" id="sbrand">
+     			<span class="seltit" data-index='-1'>选品牌</span>
+     			<div class="selcon "></div>
+     		</div>
+	        <div class="selbox selwid" id="smodel" style="z-index:1000;">
+	        	<span class="seltit" data-index="-1">选车型</span>
+		        <div class="selcon" >
+		        	<ul class="sellist">
+						<li><a data-index="" href="javascript:;">选车型</a></li>
+					</ul>
+				</div>
+	        </div>
+	    </div>
+	    <div class="seachcar" >
+   			<span class="label">按企业</span>
+		   	<div class="selbox selwid" id="scrop">
+		   		<span class="seltit" data-index="-1">选企业</span>
+		        <div class="selcon" >
+		        	<ul class="sellist">
+		        	</ul>
+				</div>
+	        </div>
+	    </div>
+	</div>
+    <div class="c">
+    	<div class="seachcar" >
+    		<span class="label">按价格</span>
+	        <div class="selbox selwid" style="z-index:1000;" id="sprice">
+	        	<span class="seltit" data-index="">选价格</span>
+		        <div class="selcon" >
+		        	<ul class="sellist">  
+						<li><a data-index="" href="javascript:;">选价格</a></li>
+						<li><a data-index="06" data-id="1" href="javascript:;">2-6万元</a></li>
+						<li><a data-index="69" data-id="2" href="javascript:;">6-9万元</a></li>
+						<li><a data-index="913" data-id="3" href="javascript:;">9-13万元</a></li>
+						<li><a data-index="1317" data-id="4" href="javascript:;">13-17万元</a></li>
+						<li><a data-index="1728" data-id="5" href="javascript:;">17-28万元</a></li>
+						<li><a data-index="2842" data-id="6" href="javascript:;">28-42万元</a></li>
+						<li><a data-index="4270" data-id="7" href="javascript:;">42-70万元</a></li>
+						<li><a data-index="70" data-id="8" href="javascript:;">70万元以上</a></li>
+					</ul>      
+				</div>
+			</div>
+		</div>
+	    <div class="seachcar" >
+	    	<span class="label">按级别</span>
+	    	<div class="selbox selwid" id="slevel">
+	    		<span class="seltit" data-index="">选级别</span>
+		        <div class="selcon" >
+		        	<ul class="sellist">
+						<li><a data-index="" href="javascript:;">选级别</a></li>
+						<li><a data-index="1" href="javascript:;">微型(A00级)</a></li>
+						<li><a data-index="2" href="javascript:;">小型(A0级)</a></li>
+						<li><a data-index="3" href="javascript:;">紧凑型(A)</a></li>
+						<li><a data-index="4" href="javascript:;">中型(B级)</a></li>
+						<li><a data-index="5" href="javascript:;">中大型(C级)</a></li>
+						<li><a data-index="8" href="javascript:;">SUV</a></li>
+						<li><a data-index="7" href="javascript:;">MPV</a></li>
+						<li><a data-index="13" href="javascript:;">跑车</a></li>		  
+					</ul>
+				</div>
+	        </div>
+	    </div>
+	</div>
+	<a class="btn" id="searchChart" href="//db.auto.sohu.com/" target="_blank">查销量</a>
+	<a class="clearbtn" id="clearbtn" href="javascript:void(0)" >清空条件</a>
+</div>
+        <div class="xlbox">
+        	<div class="tit"><h3>朗逸销量趋势图</h3><span class="col9">单位：万辆</span></div>
+          <div class="xlhead">  <div class="xlcarlist"><strong>已添加对比车型：</strong>
+
+			<a class="btn" id="searchCarModels" href="javascript:void(0)" onclick="openModelListWindow();">+ 添加车型</a></div>
+            <div class="xltab"><a href="javascript:void(0);" data-index="3">3个月</a><a href="javascript:void(0);" data-index="6" class="cur">半年</a><a href="javascript:void(0);" data-index="12">1年</a><a href="javascript:void(0);" data-index="-1">全部</a></div>
+            </div>
+            <div class="xldraw"><div id="my_chart"></div></div>
+            
+        </div>
+</div>
+
+
+
+<!--e= 销量查询-->
+<!--s= 销量数据表格-->
+
+<div class="area_box">
+   <div class="tit">
+    <h2>朗逸销量数据</h2>
+  </div>
+  	<table class="salenum">
+    	<tbody>
+        	<tr>
+        	<th>项目</th>
+        	<th>2018-6</th>
+        	<th>2018-5</th>
+        	<th>2018-4</th>
+        	<th>2018-6同比</th>
+        	<th>2018-6环比</th>
+        	<th class="last">1-6月累计</th>
+        	<th class="last">累计同比</th>
+        	<th class="last">2017年</th>
+        	</tr>  
+            
+                <tr class="um3">
+                    
+                            <td>朗逸销量</td>
+                        
+                    <td>41653</td>
+                    <td>40570</td>
+                    <td>30449</td>
+                    <td>26.72%</td>
+                    <td>2.67%</td>
+                    <td class="last">22.12万</td>
+                    <td class="last">-3.73%</td>
+                    <td class="last">45.71万</td>
+                </tr>
+            
+                <tr class="um3">
+                    
+                        	<td><span class="blue">其中1.2T销量</span></td>
+                        
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td class="last">0.0000万</td>
+                    <td class="last">---</td>
+                    <td class="last">0.0000万</td>
+                </tr>
+            
+                <tr class="um3">
+                    
+                        	<td><span class="blue">其中1.4T销量</span></td>
+                        
+                    <td>4194</td>
+                    <td>4904</td>
+                    <td>4895</td>
+                    <td>73.09%</td>
+                    <td>-14.48%</td>
+                    <td class="last">2.90万</td>
+                    <td class="last">55.74%</td>
+                    <td class="last">5.19万</td>
+                </tr>
+            
+                <tr class="um3">
+                    
+                        	<td><span class="blue">其中1.5L销量</span></td>
+                        
+                    <td>7916</td>
+                    <td>6471</td>
+                    <td>387</td>
+                    <td>---</td>
+                    <td>22.33%</td>
+                    <td class="last">1.48万</td>
+                    <td class="last">---</td>
+                    <td class="last">0.0000万</td>
+                </tr>
+            
+                <tr class="um3">
+                    
+                        	<td><span class="blue">其中1.6L销量</span></td>
+                        
+                    <td>29221</td>
+                    <td>28863</td>
+                    <td>25022</td>
+                    <td>-4.03%</td>
+                    <td>1.24%</td>
+                    <td class="last">17.64万</td>
+                    <td class="last">-16.36%</td>
+                    <td class="last">40.42万</td>
+                </tr>
+            
+                <tr class="um3">
+                    
+                        	<td><span class="blue">其中1.6L MT CNG销量</span></td>
+                        
+                    <td>322</td>
+                    <td>332</td>
+                    <td>145</td>
+                    <td>---</td>
+                    <td>-3.01%</td>
+                    <td class="last">0.11万</td>
+                    <td class="last">239.32%</td>
+                    <td class="last">0.10万</td>
+                </tr>
+            
+                <tr class="um3">
+                    
+                        	<td><span class="blue">其中二驱1.8T销量</span></td>
+                        
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td class="last">0.0000万</td>
+                    <td class="last">---</td>
+                    <td class="last">0.0000万</td>
+                </tr>
+            
+                <tr class="um3">
+                    
+                        	<td><span class="blue">其中二驱2.0T销量</span></td>
+                        
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td class="last">0.0000万</td>
+                    <td class="last">---</td>
+                    <td class="last">0.0000万</td>
+                </tr>
+            
+                <tr class="um3">
+                    
+                        	<td><span class="blue">其中四驱2.0T销量</span></td>
+                        
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td class="last">0.0000万</td>
+                    <td class="last">---</td>
+                    <td class="last">0.0000万</td>
+                </tr>
+            
+            <tr class="sal_bg1">
+                <td>占上汽大众份额</td>
+                <td>28.41%</td>
+                <td>29.00%</td>
+                <td>23.20%</td>
+                <td>---</td>
+                <td>---</td>
+                <td class="last">25.96%</td>
+                <td class="last">---</td>
+                <td class="last">26.91%</td>
+            </tr>
+            <tr>
+                <td>在13-17万元车型中的份额</td>
+                <td>10.90%</td>
+                <td>10.20%</td>
+                <td>7.68%</td>
+                <td>---</td>
+                <td>---</td>
+                <td class="last">9.25%</td>
+                <td class="last">---</td>
+                <td class="last">10.58%</td>
+            </tr>             
+            <tr>
+                <td>在紧凑型车级别中的份额</td>
+                <td>6.77%</td>
+                <td>6.71%</td>
+                <td>5.15%</td>
+                <td>---</td>
+                <td>---</td>
+                <td class="last">6.26%</td>
+                <td class="last">---</td>
+                <td class="last">6.56%</td>
+            </tr>             
+            <tr class="sal_bg1">
+                <td>在13-17万元车型中排名</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>---</td>
+                <td>---</td>
+                <td class="last">1</td>
+                <td class="last">---</td>
+                <td class="last">1</td>
+            </tr> 
+            <tr>
+                <td>在紧凑型车级别中的排名</td>
+                <td>2</td>
+                <td>1</td>
+                <td>2</td>
+                <td>---</td>
+                <td>---</td>
+                <td class="last">1</td>
+                <td class="last">---</td>
+                <td class="last">1</td>
+            </tr>                         
+        </tbody>
+    </table>
+
+</div>
+<!--e= 销量数据列表-->
+
+<!--s= 饼图-->
+<div class="area_box">
+   <div class="tit">
+    <h2>朗逸 占 上海大众 销量份额 </h2><span class="time">(2018年6月)</span>
+  </div>
+  <div class="chart_box">
+  	 <div class="chart_con">
+         <object type="application/x-shockwave-flash" data="//m3.auto.itc.cn/car/theme/newdb/swf/open-flash-chart_e1d09d4.swf" width="400" height="300" id="CorpModelChart" style="visibility: visible;">
+            <param name="wmode" value="transparent"/><param name="flashvars" value="data-file=/xml/share_model_1195.json"/>
+        </object>
+     </div>
+     <ul class="chart_list" id="CorpModelChartLegend">
+     </ul>
+     <a class="btn"  href="//db.auto.sohu.com/brand_197/salesbrandpage_180.shtml" target="_parent">查询上海大众销量数据</a>
+  </div>
+</div>
+<!--e= 饼图-->
+
+<!--s= 销量说明-->
+
+<div class="sales_tip">
+	<span class="red">特别说明：</span>
+    <p>1、目前搜狐汽车销量库仅涵盖了国内市场在售的大部分国产汽车销量，暂无进口汽车销量数据，因此可能造成部分统计数据与厂商公布的不一致；本库数据仅供参考，如有差异请以厂商公布为准。</p>
+    <p>2、本库数据均为搜狐汽车收集、整理，版权归搜狐汽车所有。</p>
+    <p>3、如需引用本库数据，必须注明数据来源为搜狐汽车。</p>
+    <p>4、联系合作请发邮件：malishi@sohu-inc.com。</p>
+</div>
+<!--e= 销量说明-->
+</div>
+<div id="condition" style="" class="jBox-wraper">
+   <div class="jBox-handler"><h3>选择车型-车型按品牌名称的拼音序列排序，最多添加四项!</h3><a href="javascript:void(0)" class="close" title="关闭">&times;</a></div>
+	<div id="selectData"></div>
+	<div class="jBox-content"><ul id="listUl" >
+		
+	</ul>
+	</div>
+</div>
+<script type="text/javascript" src="//auto.sohu.com/upload/201311mqauto/js/jquery-1.8.3.min.js"></script>
+<script>
+var sales_seldata={type:"model",data:[ 2251,'朗逸']};//tyle:'corp', 'model', 'brand','price','level'
+var sales_chartdata=[{ourl:'//db.auto.sohu.com/cxdata/json/corp/2251CorpModelChart.json',swfid:'CorpModelChart',listid:$("#CorpModelChartLegend")}]; //饼图数据
+
+parent.changeNavAddrForXL({
+		modelId:2251,
+		subBrandId:1073,
+		rootBrandId:197
+});
+</script>
+
+<script src="//db.auto.sohu.com/sales/js/json2.js" charset="utf-8" type="text/javascript" ></script>  
+<script src="//db.auto.sohu.com/cxdata/js/dbDate.js"></script>
+<script src="//m2.auto.itc.cn/car/theme/dbcatalog/grunt/sales/modelChartPage_7a37fd0.js" charset="utf-8" type="text/javascript"></script> 
+    
+
+</body>
+</html>
+get page: http://db.auto.sohu.com/model_2251/salescar/iframe.html
+name:	null

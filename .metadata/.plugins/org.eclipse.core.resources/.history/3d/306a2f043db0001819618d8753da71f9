@@ -1,0 +1,29 @@
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+
+public class Test {
+	
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        ArrayList<Ding> list = new ArrayList();
+        int num = sc.nextInt();
+        int time = sc.nextInt();
+        for(int i = 0;i<num;i++){
+            list.add(new Test().new Ding(sc.nextInt(),sc.nextInt(),sc.nextInt()));
+        }
+        int count = 0;
+        for (Ding ding : list) {
+			if(!ding.compare(time).equals("null")) {
+				System.out.println(ding.compare(time));
+				count++;
+			}
+		}
+        if(count == 0) {
+        	System.out.println("null");
+        }
+    }
+    
+
+}

@@ -1,0 +1,21 @@
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class Test {
+	public static void main(String[] args) {
+		Set set = new TreeSet();
+        Scanner sc = new Scanner(System.in);
+        do{
+            set.add(sc.nextLine());
+        }while(sc.hasNext());
+        for(Object i:set){
+            System.out.println(i);
+        }
+
+}
+}

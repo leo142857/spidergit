@@ -1,0 +1,28 @@
+
+import java.util.ArrayList;
+
+
+public class Test {
+    public class Ding{
+        int id;
+        int start;
+        int end;
+        public Ding(int id,int start,int end) {
+        	this.id = id;
+        	this.start = start;
+        	this.end = end;
+        }
+        public String compare(int time) {
+        	if(time>=start&&time<=end) {
+        		return this.id+"";
+        	}
+        	return "null";
+        }
+    }
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        ArrayList<Ding> list = new ArrayList();
+    }
+    
+
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+                    "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="Mapper">
+
+    
+    <insert id="replaceAll" parameterType="com.leo.carspider.carsales.CarSales" >
+        REPLACE INTO carsales
+		VALUES (#{id},#{carType},#{field1},#{field2},#{field3},#{field4},#{field5},#{field6},#{field7},#{field8},#{field9})
+    </insert>
+</mapper>

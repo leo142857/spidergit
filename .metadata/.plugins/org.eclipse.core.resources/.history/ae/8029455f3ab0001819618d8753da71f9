@@ -1,0 +1,28 @@
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class Test {
+    public class Ding{
+        int id;
+        int start;
+        int end;
+        public Ding(int id,int start,int end) {
+        	this.id = id;
+        	this.start = start;
+        	this.end = end;
+        }
+        
+    }
+    public static void main(String[] args){
+        
+    }
+    
+
+}

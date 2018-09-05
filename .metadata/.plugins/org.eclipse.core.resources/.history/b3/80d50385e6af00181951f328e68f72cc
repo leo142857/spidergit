@@ -1,0 +1,37 @@
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.Scanner;
+
+public class Test {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int num = sc.nextInt();
+		int count =0;
+		int min = 999999;
+		int[] r = new int[num];
+		for(int i = 0;i<num;i++){
+			r[i] = sc.nextInt();
+		}
+		int p = r[0];
+		for(int i = 1;i<num-1;i++){
+			count = 0;
+			for(int n = 0;n<num;n++){
+				if(i==n){
+					continue;
+				}
+				count+= Math.abs(p-r[n]);
+				p = r[n];
+				System.out.println(p);
+			}
+//			System.out.println(count);
+			if(count<min){
+				min = count;
+			}
+		}
+		System.out.println(min); 
+		
+	}
+
+}
